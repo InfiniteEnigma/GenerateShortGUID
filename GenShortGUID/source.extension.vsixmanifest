@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="GenShortGUID.edca36bc-3c6a-4a77-affc-312c2d426bed" Version="1.0" Language="en-US" Publisher="Company" />
-    <DisplayName>GenShortGUID</DisplayName>
+    <Identity Id="VSIXProject1.Mikhail Temkine.c5450a72-7f4e-4548-bd40-515e14ae6f8c" Version="1.0" Language="en-US" Publisher="Mikhail Temkine" />
+    <DisplayName>VSIXProject1</DisplayName>
     <Description>Empty VSIX Project.</Description>
   </Metadata>
   <Installation>
-    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0, 16.0)" />
+    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0]" />
   </Installation>
   <Dependencies>
     <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
