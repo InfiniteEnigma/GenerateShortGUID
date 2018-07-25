@@ -51,8 +51,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Command1.cs" />
-    <Compile Include="Command1Package.cs" />
+    <Compile Include="Generate.cs" />
+    <Compile Include="GeneratePackage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -63,12 +63,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <VSCTCompile Include="Command1Package.vsct">
+    <VSCTCompile Include="GeneratePackage.vsct">
       <ResourceName>Menus.ctmenu</ResourceName>
     </VSCTCompile>
     <Content Include="index.html" />
-    <Content Include="Resources\Command1.png" />
-    <Content Include="Resources\Command1Package.ico" />
+    <Content Include="Resources\Generate.png" />
+    <Content Include="Resources\GeneratePackage.ico" />
     <Content Include="stylesheet.css" />
   </ItemGroup>
   <ItemGroup>

@@ -1,5 +1,5 @@
 ﻿//------------------------------------------------------------------------------
-// <copyright file="Command1Package.cs" company="Company">
+// <copyright file="GeneratePackage.cs" company="Company">
 //     Copyright (c) Company.  All rights reserved.
 // </copyright>
 //------------------------------------------------------------------------------
@@ -36,21 +36,21 @@ namespace VSIXProject1
     /// </para>
     /// </remarks>
     [PackageRegistration(UseManagedResourcesOnly = true)]
-    [InstalledProductRegistration("#110", "#112", "1.0", IconResourceID = 400)] // Info on this package for Help/About
+    [InstalledProductRegistration("#1110", "#1112", "1.0", IconResourceID = 1400)] // Info on this package for Help/About
     [ProvideMenuResource("Menus.ctmenu", 1)]
-    [Guid(Command1Package.PackageGuidString)]
+    [Guid(GeneratePackage.PackageGuidString)]
     [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "pkgdef, VS and vsixmanifest are valid VS terms")]
-    public sealed class Command1Package : Package
+    public sealed class GeneratePackage : Package
     {
         /// <summary>
-        /// Command1Package GUID string.
+        /// GeneratePackage GUID string.
         /// </summary>
-        public const string PackageGuidString = "a32b2354-fb7b-4bc7-8371-3e1c92f89327";
+        public const string PackageGuidString = "d7b5bbc1-702b-43f5-9df6-fe9507c802c6";
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Command1"/> class.
+        /// Initializes a new instance of the <see cref="Generate"/> class.
         /// </summary>
-        public Command1Package()
+        public GeneratePackage()
         {
             // Inside this method you can place any initialization code that does not require
             // any Visual Studio service because at this point the package object is created but
@@ -66,7 +66,7 @@ namespace VSIXProject1
         /// </summary>
         protected override void Initialize()
         {
-            Command1.Initialize(this);
+            Generate.Initialize(this);
             base.Initialize();
         }
 

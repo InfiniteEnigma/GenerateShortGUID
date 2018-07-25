@@ -1,5 +1,5 @@
 ﻿//------------------------------------------------------------------------------
-// <copyright file="Command1.cs" company="Company">
+// <copyright file="Generate.cs" company="Company">
 //     Copyright (c) Company.  All rights reserved.
 // </copyright>
 //------------------------------------------------------------------------------
@@ -15,7 +15,7 @@ namespace VSIXProject1
     /// <summary>
     /// Command handler
     /// </summary>
-    internal sealed class Command1
+    internal sealed class Generate
     {
         /// <summary>
         /// Command ID.
@@ -25,7 +25,7 @@ namespace VSIXProject1
         /// <summary>
         /// Command menu group (command set GUID).
         /// </summary>
-        public static readonly Guid CommandSet = new Guid("5411f545-cfa6-444b-a6c0-5cdc4f0eb32f");
+        public static readonly Guid CommandSet = new Guid("ce56da5b-05e4-41ca-bc5b-003ed5e22871");
 
         /// <summary>
         /// VS Package that provides this command, not null.
@@ -33,11 +33,11 @@ namespace VSIXProject1
         private readonly Package package;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Command1"/> class.
+        /// Initializes a new instance of the <see cref="Generate"/> class.
         /// Adds our command handlers for menu (commands must exist in the command table file)
         /// </summary>
         /// <param name="package">Owner package, not null.</param>
-        private Command1(Package package)
+        private Generate(Package package)
         {
             if (package == null)
             {
@@ -58,7 +58,7 @@ namespace VSIXProject1
         /// <summary>
         /// Gets the instance of the command.
         /// </summary>
-        public static Command1 Instance
+        public static Generate Instance
         {
             get;
             private set;
@@ -81,7 +81,7 @@ namespace VSIXProject1
         /// <param name="package">Owner package, not null.</param>
         public static void Initialize(Package package)
         {
-            Instance = new Command1(package);
+            Instance = new Generate(package);
         }
 
         /// <summary>
@@ -94,7 +94,7 @@ namespace VSIXProject1
         private void MenuItemCallback(object sender, EventArgs e)
         {
             string message = string.Format(CultureInfo.CurrentCulture, "Inside {0}.MenuItemCallback()", this.GetType().FullName);
-            string title = "Command1";
+            string title = "Generate";
 
             // Show a message box to prove we were here
             VsShellUtilities.ShowMessageBox(

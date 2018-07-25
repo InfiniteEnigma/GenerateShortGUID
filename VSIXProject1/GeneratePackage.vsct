@@ -22,7 +22,7 @@
 
   <!--The Commands section is where commands, menus, and menu groups are defined.
       This section uses a Guid to identify the package that provides the command defined inside it. -->
-  <Commands package="guidCommand1Package">
+  <Commands package="guidGeneratePackage">
     <!-- Inside this section we have different sub-sections: one for the menus, another
     for the menu groups, one for the buttons (the actual commands), one for the combos
     and the last one for the bitmaps used. Each element is identified by a command id that
@@ -36,7 +36,7 @@
          group as the part of a menu contained between two lines. The parent of a group
          must be a menu. -->
     <Groups>
-      <Group guid="guidCommand1PackageCmdSet" id="MyMenuGroup" priority="0x0600">
+      <Group guid="guidGeneratePackageCmdSet" id="MyMenuGroup" priority="0x0600">
         <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS"/>
       </Group>
     </Groups>
@@ -52,11 +52,11 @@
               <CommandFlag>DefaultInvisible</CommandFlag>
               <CommandFlag>DynamicVisibility</CommandFlag>
           If you do not want an image next to your command, remove the Icon node /> -->
-      <Button guid="guidCommand1PackageCmdSet" id="Command1Id" priority="0x0100" type="Button">
-        <Parent guid="guidCommand1PackageCmdSet" id="MyMenuGroup" />
+      <Button guid="guidGeneratePackageCmdSet" id="GenerateId" priority="0x0100" type="Button">
+        <Parent guid="guidGeneratePackageCmdSet" id="MyMenuGroup" />
         <Icon guid="guidImages" id="bmpPic1" />
         <Strings>
-          <ButtonText>Invoke Command1</ButtonText>
+          <ButtonText>Invoke Generate</ButtonText>
         </Strings>
       </Button>
     </Buttons>
@@ -68,21 +68,21 @@
             bitmap strip containing the bitmaps and then there are the numeric ids of the elements used
             inside a button definition. An important aspect of this declaration is that the element id
             must be the actual index (1-based) of the bitmap inside the bitmap strip. -->
-      <Bitmap guid="guidImages" href="Resources\Command1.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough"/>
+      <Bitmap guid="guidImages" href="Resources\Generate.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough"/>
     </Bitmaps>
   </Commands>
 
   <Symbols>
     <!-- This is the package guid. -->
-    <GuidSymbol name="guidCommand1Package" value="{a32b2354-fb7b-4bc7-8371-3e1c92f89327}" />
+    <GuidSymbol name="guidGeneratePackage" value="{d7b5bbc1-702b-43f5-9df6-fe9507c802c6}" />
 
     <!-- This is the guid used to group the menu commands together -->
-    <GuidSymbol name="guidCommand1PackageCmdSet" value="{5411f545-cfa6-444b-a6c0-5cdc4f0eb32f}">
+    <GuidSymbol name="guidGeneratePackageCmdSet" value="{ce56da5b-05e4-41ca-bc5b-003ed5e22871}">
       <IDSymbol name="MyMenuGroup" value="0x1020" />
-      <IDSymbol name="Command1Id" value="0x0100" />
+      <IDSymbol name="GenerateId" value="0x0100" />
     </GuidSymbol>
 
-    <GuidSymbol name="guidImages" value="{767caf5d-4767-4b86-a2e8-a8a6f25fc442}" >
+    <GuidSymbol name="guidImages" value="{b06bc964-c611-4e94-9fa3-d4cd50ea35a8}" >
       <IDSymbol name="bmpPic1" value="1" />
       <IDSymbol name="bmpPic2" value="2" />
       <IDSymbol name="bmpPicSearch" value="3" />
