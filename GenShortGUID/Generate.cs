@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using Task = System.Threading.Tasks.Task;
+using EnvDTE;
+using EnvDTE80;
 
 namespace GenShortGUID
 {
@@ -82,7 +84,9 @@ namespace GenShortGUID
         private void GenGUID(object sender, EventArgs e)
         {
             ThreadHelper.ThrowIfNotOnUIThread();
-            string guid = Guid.NewGuid().ToString().Substring(8);
+            string guid = Guid.NewGuid().ToString().Substring(0, 8);
+            commandService
+            (DTE.ActiveDocument.Selection as EnvDTE.TextSelection).Text = "my new text";
             System.Diagnostics.Debug.WriteLine(guid);
             Console.Write(guid);
         }
